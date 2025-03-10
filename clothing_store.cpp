@@ -9,7 +9,7 @@ int main() {
         int x, y, z, a, b, c; 
         cin >> x >> y >> z >> a >> b >> c;
         
-        int happy = 0;
+        int happy = 0 ;
 
         int takeS = min(x, a); 
         x -= takeS;
