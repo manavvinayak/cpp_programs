@@ -20,5 +20,6 @@ int main(){
     cin>>r;
     int ncr = combination(n,r);
     int npr = permutation(n,r);
-    cout<<ncr<<endl<<npr;
+    cout<<ncr<<endl<<npr; 
+    
 }
