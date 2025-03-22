@@ -1,3 +1,4 @@
+// print the factorials of first n numbers
 #include <iostream>
 using namespace std;
 int fact(int n){
