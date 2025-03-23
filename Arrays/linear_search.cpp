@@ -2,24 +2,20 @@
 using namespace std;
 int main() {
     int n;
-    cin>>n; 
-    int x;
-    cout<<"Target element";
-    cin>>x;
+    cin>>n;
     int arr[n];
-    bool flag = false; // NOT Found
-    for(int i=0; i< n; i++) {
+    // taking input
+    for(int i=0; i<= n - 1; i++) {
         cin>>arr[i];
-        if (arr[i]== x){
-            bool flag = true;
-            cout<<"Found";
-        }
-        else{
-            cout<<"Not found ";
-            break;
-        }
-        
     }
-     
-    return 0;
+    // checking the target element
+    int x;
+    cout<<"Enter the element you wanna search";
+    cin>>x;
+    bool flag = false; // element isn't present
+    for(int i=0; i<= n-1;i++){
+        if(arr[i] == x) flag = true;
+    }
+    if(flag == true) cout<<"Element Found";
+    else cout<<"Element Not Found";
 }
