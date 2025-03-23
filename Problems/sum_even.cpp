@@ -1,5 +1,8 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout<<"Hello World"<<endl;
+    int n;
+    cin>>n;
+    int arr[n];
+    
 }

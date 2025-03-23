@@ -12,7 +12,7 @@ int main() {
 }
 
 
-// if taking external variav=ble isn't allowed
+// if taking external variable isn't allowed
 #include <iostream>
 using namespace std;
 int main() {
