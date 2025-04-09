@@ -1,5 +1,6 @@
 #include <iostream>
 #include<vector>
+#include <algorithm>
 using namespace std;
 
 int main() {
@@ -9,6 +10,7 @@ int main() {
     for(int i=0;i<n;i++) cin>>nums[i];
     vector<int> ans(n);
     ans[0] = -1;
+    // left iteration
     int max = nums[0];
     for(int i=1; i< n; i++) {
          if(nums[i] > max) {
@@ -24,6 +26,7 @@ int main() {
     cout<<endl;
 
     vector <int> answ(n);
+    // right iteration
     answ[n-1] = -1;
     int maxi = nums[n-1];
     for(int i= n-2; i >= 0; i--) {
@@ -40,6 +43,18 @@ int main() {
         cout<<answ[i]<<" ";
     }
     cout<<endl;
-
+    int water=0;
+    int temp = 0;
+    for(int i=0; i< n; i++) {
+        if(ans[i] == -1 || answ[i] == -1) {
+             water += 0;
+        }
+        else {
+            temp = min(ans[i],answ[i]);
+            temp = temp - nums[i];
+            water = water + temp;
+        }
+    }
+    cout<<water;
     
 }
