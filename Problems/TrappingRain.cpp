@@ -22,5 +22,24 @@ int main() {
         cout<<ans[i]<<" ";
     }
     cout<<endl;
+
+    vector <int> answ(n);
+    answ[n-1] = -1;
+    int maxi = nums[n-1];
+    for(int i= n-2; i >= 0; i--) {
+        if(nums[i] > maxi) {
+            answ[i] = -1;
+            maxi = nums[i];
+        }
+        else {
+            answ[i] = maxi;
+        }
+    }
+    // print
+    for(int i=0; i < n; i++) {
+        cout<<answ[i]<<" ";
+    }
+    cout<<endl;
+
     
 }
