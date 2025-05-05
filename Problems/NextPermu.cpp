@@ -22,7 +22,7 @@ int main() {
     cout<<endl;
     for(int i=n-1; i >= 1; i--) {
         if(v[i] > v[i-1]) {
-            copy = v[i-1];
+            copy = i-1;
             break;
         }
     }
