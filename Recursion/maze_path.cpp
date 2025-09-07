@@ -10,8 +10,20 @@ int maze(int sr,int sc , int er, int ec){
       int totalways = rightway + downway;
 
 }
-int main() {
-    cout<<maze(0,0,2,3);
+
+// printing the path that how much path it'll take to reach the destination on maze
+void printPath(int sr,int sc , int er, int ec, string s){
+    if(sr > er || sc > ec) return;
+    if(sr == er && sc == ec){
+        cout<<s<<endl;
+        return;
+    }
+    printPath(sr, sc +1, er, ec, s +'R');
+    printPath(sr +1, sc , er, ec, s +'D');
+
+}
+int main() {    
+    printPath(1,1,3,3,"");
                  // 2 rows 3 columns
 
     // 3 ways                                                                                                                                              
